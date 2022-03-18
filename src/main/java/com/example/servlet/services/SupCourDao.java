@@ -11,7 +11,7 @@ public class SupCourDao implements GenericDao<Cour>{
     private static List<Cour> cours = new ArrayList<Cour>();
     private static int idSequence = 0;
 
-    private SupCourDao() { }
+    public SupCourDao() { }
 
     @Override
     public Cour findById(int id) {

@@ -10,7 +10,7 @@ public class SupPlanningDao implements GenericDao<Planning> {
     private static List<Planning> plannings = new ArrayList<Planning>();
     private static int idSequence = 0;
 
-    private SupPlanningDao() { }
+    public SupPlanningDao() { }
 
     @Override
     public Planning findById(int id) {
