@@ -37,15 +37,15 @@ public class SupCourDao implements GenericDao<Cour>{
     }
 
     @Override
-    public boolean addProduct(Cour item) {
+    public boolean addItem(Cour item) {
         item.setId(idSequence++);
         cours.add(item);
         return true;
     }
 
     @Override
-    public boolean updateProduct(Cour cour) {
-        int index = getProductIndexById(cour.getId());
+    public boolean updateItem(Cour cour) {
+        int index = getItemIndexById(cour.getId());
         if(index > -1) {
             cours.set(index, cour);
             return true;
@@ -55,12 +55,12 @@ public class SupCourDao implements GenericDao<Cour>{
     }
 
     @Override
-    public List<Cour> getAllProducts() {
+    public List<Cour> getAllItems() {
         return cours;
     }
 
     @Override
-    public int getProductIndexById(int id) {
+    public int getItemIndexById(int id) {
         for (int i = 0; i < cours.size(); i++) {
             Cour product = cours.get(i);
             if(product.getId() == id) {

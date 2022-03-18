@@ -36,15 +36,15 @@ public class SupPlanningDao implements GenericDao<Planning> {
     }
 
     @Override
-    public boolean addProduct(Planning item) {
+    public boolean addItem(Planning item) {
         item.setId(idSequence++);
         plannings.add(item);
         return true;
     }
 
     @Override
-    public boolean updateProduct(Planning item) {
-        int index = getProductIndexById(item.getId());
+    public boolean updateItem(Planning item) {
+        int index = getItemIndexById(item.getId());
         if(index > -1) {
             plannings.set(index, item);
             return true;
@@ -54,12 +54,12 @@ public class SupPlanningDao implements GenericDao<Planning> {
     }
 
     @Override
-    public List<Planning> getAllProducts() {
+    public List<Planning> getAllItems() {
         return plannings;
     }
 
     @Override
-    public int getProductIndexById(int id) {
+    public int getItemIndexById(int id) {
         for (int i = 0; i < plannings.size(); i++) {
             Planning product = plannings.get(i);
             if(product.getId() == id) {

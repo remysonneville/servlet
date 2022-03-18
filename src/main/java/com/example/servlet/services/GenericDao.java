@@ -6,8 +6,8 @@ public interface GenericDao<T> {
     public T findById(int id);
     public boolean deleteById(int id);
     public boolean deleteItem(T item);
-    public boolean addProduct(T item);
-    public boolean updateProduct(T item);
-    public List<T> getAllProducts();
-    public int getProductIndexById(int id);
+    public boolean addItem(T item);
+    public boolean updateItem(T item);
+    public List<T> getAllItems();
+    public int getItemIndexById(int id);
 }
