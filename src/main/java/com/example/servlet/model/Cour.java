@@ -14,6 +14,6 @@ public class Cour {
     private int id;
     private String material;
     private Date date;
-    private Date beging;
+    private Date beginning;
     private Date ending;
 }
